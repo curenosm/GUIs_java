@@ -1,7 +1,10 @@
 package cap01.estructuraapp;
 
+import javax.swing.*;
+import java.awt.event.*;
 
-public class CAplicacion extends javax.swing.JFrame{
+// Todas las aplicaciones graficas que usen swing, heredan de JFrame
+public class CAplicacion extends JFrame{
 
     public CAplicacion(){
         /* Establecemos las configuraciones de la interfaz. */
@@ -13,15 +16,15 @@ public class CAplicacion extends javax.swing.JFrame{
     private void initComponents(){
         // Agregamos un escuchador de eventos
         addWindowListener(
-            new java.awt.event.WindowAdapter() {
-                public void windowClosing(java.awt.event.WindowEvent evt){
+            new WindowAdapter() {
+                public void windowClosing(WindowEvent evt){
                     exitForm(evt);
                 }
             }               
         );
     }
     
-    private void exitForm(java.awt.event.WindowEvent evt){
+    private void exitForm(WindowEvent evt){
         System.exit(0);
     }
     
